@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55215159-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-55215159-2');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+
+<title>Letter</title>
+
+<link rel="stylesheet" href="/static/letter-style.css" type="text/css" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- CSRF -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        var csrftoken = $('meta[name=csrf-token]').attr('content')
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type)) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken)
+                }
+            }
+        })
+    })
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  function submit() {
+    var password = $("#password").val()
+    var data = {"password": password}
+    $.post("/page-body", data)
+    .done(function(response) {
+      $("#welcome").slideUp()
+      $("#page-body").html(response).show()
+      $("#error").text("")
+    })
+    .fail(function(response) {
+      $("#error").text("Incorrect password")
+      $("#password").val("")
+    })
+  }
+  $("#view-letter").click(submit)
+  $('#password').keydown(function(e) {
+    if (e.keyCode == 13) {
+      e.preventDefault();
+      submit()
+    }
+  });
+})
+</script>
+
+</head>
+
+<body>
+  <div id="welcome">
+    <h1 class="title">Welcome</h1>
+    <p>Please enter the password.</p>
+    <form>
+      Password: <input type="password" id="password" class="txtbox"></input>
+      <input type="button" id="view-letter" value="submit" class="btn"></input>
+      <span id="error"></span>
+    </form>
+  </div>
+
+  <div id="page-body"></div>
+</body>
+</html>
+

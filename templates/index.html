@@ -1,78 +1,97 @@
-<html lang="en">
-<head>
+<!DOCTYPE HTML>
+<!--
+  Story by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Our Journey to Forever Family</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55215159-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-55215159-2');
-</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55215159-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-55215159-2');
+    </script>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<title>Letter</title>
-
-<link rel="stylesheet" href="/static/letter-style.css" type="text/css" />
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<!-- CSRF -->
-<script type="text/javascript">
+    <script type="text/javascript">
     $(document).ready(function() {
-        var csrftoken = $('meta[name=csrf-token]').attr('content')
-        $.ajaxSetup({
-            beforeSend: function(xhr, settings) {
-                if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type)) {
-                    xhr.setRequestHeader("X-CSRFToken", csrftoken)
-                }
-            }
+      function submit() {
+        var password = $("#password").val()
+        var data = {"password": password}
+        $.post("/page-body", data)
+        .done(function(response) {
+          $("#enter-password").fadeOut('fast', function() {
+            $("#page-body").html(response).fadeIn('fast')
+          })
+          $("#error").text("")
         })
+        .fail(function(response) {
+          $("#error").text("Incorrect password")
+          $("#password").val("")
+        })
+      }
+      $("#get-body").click(submit)
+      $('#password').keydown(function(e) {
+        if (e.keyCode == 13) {
+          e.preventDefault();
+          submit()
+        }
+      });
     })
-</script>
+    </script>
 
-<script type="text/javascript">
-$(document).ready(function() {
-  function submit() {
-    var password = $("#password").val()
-    var data = {"password": password}
-    $.post("/page-body", data)
-    .done(function(response) {
-      $("#welcome").slideUp()
-      $("#page-body").html(response).show()
-      $("#error").text("")
-    })
-    .fail(function(response) {
-      $("#error").text("Incorrect password")
-      $("#password").val("")
-    })
-  }
-  $("#view-letter").click(submit)
-  $('#password').keydown(function(e) {
-    if (e.keyCode == 13) {
-      e.preventDefault();
-      submit()
-    }
-  });
-})
-</script>
+  </head>
 
-</head>
+  <body class="is-preload">
 
-<body>
-  <div id="welcome">
-    <h1 class="title">Welcome</h1>
-    <p>Please enter the password.</p>
-    <form>
-      Password: <input type="password" id="password" class="txtbox"></input>
-      <input type="button" id="view-letter" value="submit" class="btn"></input>
-      <span id="error"></span>
-    </form>
-  </div>
+    <!-- Wrapper -->
+    <div id="wrapper" class="divided">
 
-  <div id="page-body"></div>
-</body>
+        <!-- One -->
+        {% if not bypass_password %}
+        <section id="enter-password" class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+          <div class="content">
+            <h1>Please Enter the Password</h1>
+            <form>
+              <div class="fields">
+                <div class="field">
+                  <input type="password" name="password" id="password" value="" />
+                </div>
+              </div>
+              <div class="actions special">
+                <input type="button" name="get-body" id="get-body" value="submit" />
+                <span id="error"></span>
+              </div>
+            </form>
+          </div>
+          <div class="image">
+            <img src="{{ url_for('static', filename='images/banner.jpg') }}" alt="" />
+          </div>
+        </section>
+        {% endif %}
+
+        <div class="{% if not bypass_password %}hidden{% endif %}" id="page-body">{{ protected_content | safe }}</div>
+
+      </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+  </body>
 </html>
-

@@ -11,6 +11,15 @@ def index():
 @app.route("/page-body", methods=['POST'])
 def page_body():
     if request.form["password"] == "pickles":
-        return render_template('page_body.html')
+        return render_template('index2.html')
     else:
         abort(401)
+
+@app.route("/bypass-password")
+def bypass_password():
+    if app.config['DEBUG']:
+        return render_template('index.html',
+                bypass_password=True,
+                protected_content=render_template('index2.html'))
+    else:
+        abort(404)
