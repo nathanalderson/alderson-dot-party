@@ -23,3 +23,7 @@ def bypass_password():
                 protected_content=render_template('index2.html'))
     else:
         abort(404)
+
+@app.route("/demo")
+def demo():
+    return render_template('index-demo.html')
