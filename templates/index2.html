@@ -10,7 +10,7 @@
 </section>
 
 <!-- Last time... -->
-<section class="spotlight style5 orient-left content-align-left image-position-center onscroll-image-fade-in">
+<section class="spotlight style4 orient-right content-align-left image-position-center onscroll-image-fade-in">
   <div class="content">
     <h2>Last time on "The Aldersons Are Adopting"...</h2>
     <p>It was 2013, and Nathan and Hannah decided to build their family with adoption. God called them to Eastern Europe,
@@ -19,47 +19,53 @@
     finally brought them home less than a year after they filled out their first application paper.</p>
   </div>
   <div class="image">
-    <img src="{{ url_for('static', filename='images/spotlight02.jpg') }}" alt="" />
+    <img src="{{ url_for('static', filename='images/dock.jpg') }}" alt="" />
   </div>
 </section>
 
 <!-- Fast Forward -->
-<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
   <div class="content">
     <h2>Fast Forward to 2018...</h2>
     <p>In the fall of 2018, Nathan, Hannah, and their four kiddos (now eight, ten, fourteen, and sixteen) were marching along
     through the usual story lines: school, work, church, PTA meetings, sports (all the sports!). But God had a plot twist
     coming...</p>
-    <p>One afternoon, Hannah and Nathan were... when they got a call...</p>
+    <p>Nathan was in St. Louis for a work conference and Hannah was at church when our old social worker
+    called us with the news that our kids' bio parents had had another baby. They wanted to know if we wanted
+    to pursue another adoption.</p>
+    <p>A little while later, we told our kids about their sibling in a very fun way!</p>
+    <video width="75%" controls>
+      <source src="{{ url_for('static', filename='images/reveal.m4v') }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
   <div class="image">
-    <img src="{{ url_for('static', filename='images/spotlight03.jpg') }}" alt="" />
+    <img src="{{ url_for('static', filename='images/seven-pair.jpg') }}" alt="" />
   </div>
 </section>
 
-<!-- Gender Reveal -->
-<section class="wrapper style1 align-center">
+<!-- You -->
+<section class="wrapper style1 align-left">
   <div class="inner">
-    <h2>The Gender Reveal</h2>
-    <p>We had a little gender reveal party with our kids...</p>
-  </div>
-</section>
-
-<!-- Where do you come in -->
-<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-  <div class="content">
+    <span class="image left">
+      <img src="{{ url_for('static', filename='images/thermometer.jpg') }}" alt="" />
+    </span>
     <h2>Where do you come in?</h2>
     <p>Last time we adopted, it was something we were able to plan, save, and fundraise for. This
-    time, God's little plot twist came quite unexpectedly. As a result, the financial shock to our
-    family could be quite severe. We have spent nearly $10,000 from our savings already. We have
-    received $12,000 in incredibly generous grants, and have applied for another $5000 or so. The
-    whole adoption (including travel) will cost an estimated $44,000, which leaves us needing about
-    $19,000 more in order to be fully funded and adopt debt free.</p>
+    time, God's little plot twist came quite unexpectedly and we are not in the same financial
+    situation. Unfortunately, we do not have $44,000 in savings to cover this adoption. We have
+    spent nearly $10,000 from our savings already. We have received $12,000 in incredibly generous
+    grants, and have applied for another $5000 or so. The whole adoption (including travel) will
+    cost an estimated $44,000, which leaves us needing about $19,000 more in order to be fully
+    funded and adopt debt free.</p>
     <p>We know that when God called us to this adoption, he also provided everything we would need.
     We have already seen that in so many ways. So, if you would like to help us raise the funds we
     need to bring our little plot twist home, here's how you can give...</p>
 
-    <h2>The Fundraiser</h2>
+    <h2 id="fundraiser">The Fundraiser</h2>
+    <span class="image right">
+      <img src="{{ url_for('static', filename='images/wall-orig.jpg') }}" alt="" />
+    </span>
     <p>It's simple and fun!</p>
     <p>There are 150 cards, numbered from 1 to 150. Each card costs the number on the front. You
     want card number sixty-two? It costs $62. Card number three? Three bucks. You get the idea.</p>
@@ -68,46 +74,62 @@
     card with a prize under it, you win the prize! Here are some of the fabulous things you could
     walk away with:</p>
     <ul>
-      <li>A weekend stay at a resort in Chattanooga, TN.</li>
-      <li>Original art piece from Misty Grenade</li>
+      <li>A four-day, three-night weekday vaction in Gatlinburg</li>
+      <li>Original art piece by <a href="http://misty.granades.com/">Misty Granade</a></li>
+      <li>Michael Kors handbag</li>
       <li>Airpods</li>
-      <li>Gift cards to Amazon, iTunes/Google Play, Starbucks, and more</li>
+      <li>Gift cards to Amazon, iTunes/Google Play, Starbucks, ice cream, and more</li>
+      <li>Two tickets to the Chattanooga or Atlanta Aquarium</li>
       <li>Custom slime or art made by kid #4</li>
-      <li>A free family photo shoot by [todo]</li>
-      <li>A free house cleaning session by [todo]</li>
+      <li>A free family photo shoot</li>
+      <li>A free house cleaning session</li>
+      <li>Manicure/Pedicure</li>
       <li>A joke</li>
+      <li>Homemade bread</li>
+      <li>Rocket City Trash Pandas&reg; swag</li>
+      <li>Your family in cross stitch</li>
+      <li>Dinner with the Aldersons</li>
       <li>And more!</li>
     </ul>
-  </div>
-  <div class="image">
-    <img src="{{ url_for('static', filename='images/seven-pair.jpg') }}" alt="" />
-  </div>
-</section>
 
-<!-- How To -->
-<section class="wrapper style1 align-center">
-  <div class="inner">
+    <h2>The Board</h2>
+    <p>The following numbers still remain:</p>
+    <ul id="board">
+    {% for i in range(1,151) %}
+      <li class="card {% if i in taken %}taken{% endif %}" id="card{{i}}">{{i}}</li>
+    {% endfor %}
+    </ul>
+
     <h2>How to Play</h2>
-    <p>Just let us know what number you want and send us the money!</p>
+    <p>Just let us know which numbers you want and send in your donation!</p>
     <p>You can call/text Hannah at 770-634-8794 or Nathan at 931-446-2935 or email
     <a href="mailto:halderson1@gmail.com">Hannah</a> or <a href="mailto:nathan@nathanalderson.com">Nathan</a>.
     You can also find both of us accross various social media platforms, if that's your thing.</p>
-    <p>You can also just send us some money on either <a href="">venmo</a> or
+    <p>You can also send us some money through either <a href="https://venmo.com/nathanalderson">venmo</a> or
     <a href="https://paypal.me/hannahandnathan">paypal</a>.  Just put the card numbers you want in
-    the comments on the transaction. We'll get in touch with you if you win!</p>
+    the comments on the transaction. We'll get in touch with you if you win and add you to the wall
+    of winners!
+    <p><span class="image">
+      <img src="{{ url_for('static', filename='images/winners.jpg') }}" alt="" id="winners"/>
+    </span></p>
+    </p>
+  </div>
+</section>
+
+<!-- Last time... -->
+<section class="spotlight style2 orient-left content-align-right image-position-center onscroll-image-fade-in">
+  <div class="content">
+    <h2>Thanks</h2>
+    <p>We couldn't do this without you</p>
+  </div>
+  <div class="image">
+    <img src="{{ url_for('static', filename='images/crib.jpg') }}" alt="" />
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="wrapper style1 align-center">
   <div class="inner">
-    <ul class="icons">
-      <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-      <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-      <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-      <li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-      <li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-    </ul>
     <p>&copy; 2019 Nathan Alderson. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
   </div>
 </footer>
