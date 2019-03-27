@@ -12,7 +12,7 @@ def index():
 
 @app.route("/page-body", methods=['POST'])
 def page_body():
-    if request.form["password"] == "pickles":
+    if request.form["password"].lower() == "keller":
         return render_template('index2.html', taken=TAKEN)
     else:
         abort(401)
