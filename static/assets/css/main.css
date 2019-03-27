@@ -8597,7 +8597,9 @@ li.card {
 }
 
 li.card.taken {
-  opacity: 0;
+  background-color: transparent;
+  color: transparent;
+  border: 1px solid mediumpurple;
 }
 
 #fundraiser {
