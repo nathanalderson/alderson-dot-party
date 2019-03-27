@@ -1,3 +1,3 @@
 #!/bin/sh
 . venv/bin/activate
-gunicorn main:app
+exec gunicorn main:app
