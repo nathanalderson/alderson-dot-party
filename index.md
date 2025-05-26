@@ -23,8 +23,8 @@ title: Party Invitation
     <div class="text-xl space-y-2">
       <p><strong>📅 When:</strong> June 20, 2025 at 6:30 PM</p>
       <p><strong>📍 Where:</strong> 310 Dallas St., Huntsville, AL 35801
-        <a href="https://maps.google.com/?q=310+Dallas+St,+Huntsville,+AL+35801" target="_blank" class="inline-block ml-2 text-blue-600 hover:text-blue-800 transition-colors">
-          📍
+        <a href="https://maps.google.com/?q=310+Dallas+St,+Huntsville,+AL+35801" target="_blank" class="text-sm text-blue-600 hover:underline">
+          directions
         </a>
       </p>
       <p><strong>👗 Dress Code:</strong> Your best high school dance attire!</p>
@@ -36,22 +36,22 @@ title: Party Invitation
   <div class="bg-gradient-to-br from-pink-500 to-purple-600 p-6 rounded-2xl transform hover:scale-105 transition-transform">
     <h3 class="text-2xl font-bold mb-4">🎵 What to Expect</h3>
     <ul class="space-y-2 text-lg">
-      <li>🎶 Savage Garden & 90s love songs</li>
-      <li>� Slow dances & fast beats</li>
+      <li>🎶 Savage Garden & 90s hits</li>
+      <li>💃 Slow dances & fast beats</li>
       <li>📸 Photo booth with props</li>
       <li>🍰 Birthday cake & treats</li>
-      <li>💕 Nostalgic romantic vibes</li>
+      <li>❓ 90s trivia & prizes</li>
     </ul>
   </div>
 
   <div class="bg-gradient-to-br from-red-500 to-pink-600 p-6 rounded-2xl transform hover:scale-105 transition-transform">
     <h3 class="text-2xl font-bold mb-4">� The Vibe</h3>
     <ul class="space-y-2 text-lg">
-      <li>🌹 Romantic 90s nostalgia</li>
+      <li>🌹 90s nostalgia</li>
       <li>✨ Dreamy dance floor moments</li>
-      <li>🎭 High school sweethearts energy</li>
-      <li>🌟 Love songs that defined a decade</li>
-      <li>� Memories to last forever</li>
+      <li>🏫 High school energy without the hormonal angst</li>
+      <li>🌟 Songs that defined a decade</li>
+      <li>🎓 Memories to last forever</li>
     </ul>
   </div>
 </div>
@@ -64,7 +64,7 @@ title: Party Invitation
   </p>
   <div class="text-lg">
     <p>💌 RSVP appreciated but not required</p>
-    <p>🎈 Come ready to dance the night away!</p>
+    <p>🎈 Come ready to party the night away!</p>
   </div>
 </div>
 
@@ -80,5 +80,5 @@ title: Party Invitation
 </div>
 
 <div class="mt-12 text-center text-sm text-purple-300">
-  <p>Questions? Contact the party planners!</p>
+  <p>Questions? Contact <a href="mailto:me@nathanalderson.com" class="text-sm text-blue-600 hover:underline">Nathan</a>.</p>
 </div>
