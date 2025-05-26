@@ -10,6 +10,13 @@ title: Party Invitation
   <div class="text-2xl md:text-3xl font-bold text-yellow-300 mb-2">
     💕 "Truly, Madly, Deeply" 💕
   </div>
+
+  <!-- Audio Player -->
+  <div class="mt-4 mb-6">
+    <div class="inline-block bg-black/70 rounded-2xl border-2 border-pink-400 neon-glow">
+      <midi-player src="SavageGarden_Truly_Madly_Deeply.mid" sound-font></midi-player>
+    </div>
+  </div>
 </div>
 
 <div class="disco-bg p-8 rounded-3xl neon-glow mb-8 text-black">
