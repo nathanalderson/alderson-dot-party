@@ -1,4 +1,0 @@
-#!/usr/bin/env python3
-with open("taken.txt", "r") as f:
-    total = sum(int(i) for i in f.read().split())
-    print(f"${total}.00")
