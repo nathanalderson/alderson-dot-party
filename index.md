@@ -1,65 +1,84 @@
 ---
 layout: default
-title: Home
+title: Party Invitation
 ---
 
-# Hello World! 🌍
-
-<div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg mb-8">
-  <p class="text-xl font-semibold">Welcome to my Jekyll GitHub Pages site!</p>
-  <p class="mt-2">This is a simple hello world website built with Jekyll, Tailwind CSS 4.x, and hosted on GitHub Pages.</p>
-</div>
-
-## About This Site
-
-<div class="grid md:grid-cols-2 gap-6 my-8">
-  <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-    <h3 class="font-bold text-blue-800 mb-2">🚀 Modern Stack</h3>
-    <ul class="text-blue-700 space-y-1">
-      <li>• Jekyll static site generator</li>
-      <li>• Tailwind CSS 4.x for styling</li>
-      <li>• GitHub Pages hosting</li>
-      <li>• Responsive design</li>
-    </ul>
-  </div>
-
-  <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-    <h3 class="font-bold text-green-800 mb-2">✨ Features</h3>
-    <ul class="text-green-700 space-y-1">
-      <li>• Clean, minimal design</li>
-      <li>• Mobile-first approach</li>
-      <li>• Fast loading times</li>
-      <li>• Easy to customize</li>
-    </ul>
+<div class="mb-8">
+  <h1 class="retro-text text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 mb-4">
+    YOU'RE INVITED!
+  </h1>
+  <div class="text-2xl md:text-3xl font-bold text-yellow-300 mb-2">
+    💕 "Truly, Madly, Deeply" 💕
   </div>
 </div>
 
-## Getting Started
-
-<div class="bg-gray-100 p-6 rounded-lg my-6">
-  <h3 class="font-bold mb-4">To run this site locally:</h3>
-  <ol class="space-y-2">
-    <li class="flex items-start">
-      <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</span>
-      <span>Make sure you have Ruby installed with <code class="bg-white px-2 py-1 rounded text-sm">asdf</code></span>
-    </li>
-    <li class="flex items-start">
-      <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</span>
-      <span>Install dependencies: <code class="bg-white px-2 py-1 rounded text-sm">bundle install</code></span>
-    </li>
-    <li class="flex items-start">
-      <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</span>
-      <span>Start the server: <code class="bg-white px-2 py-1 rounded text-sm">bundle exec jekyll serve</code></span>
-    </li>
-    <li class="flex items-start">
-      <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">4</span>
-      <span>Visit <code class="bg-white px-2 py-1 rounded text-sm">http://localhost:4000</code></span>
-    </li>
-  </ol>
+<div class="disco-bg p-8 rounded-3xl neon-glow mb-8 text-black">
+  <div class="bg-white/90 p-6 rounded-2xl">
+    <h2 class="text-4xl font-bold text-purple-800 mb-2">
+      🎉 Hannah's Totally Rad 40th Birthday Bash! 🎉
+    </h2>
+    <h3 class="text-2xl font-semibold text-pink-700 mb-4">
+      🕺 90s HIGH SCHOOL DANCE PARTY 💃
+    </h3>
+    <div class="text-xl space-y-2">
+      <p><strong>📅 When:</strong> June 20, 2025 at 6:30 PM</p>
+      <p><strong>📍 Where:</strong> 310 Dallas St., Huntsville, AL 35801
+        <a href="https://maps.google.com/?q=310+Dallas+St,+Huntsville,+AL+35801" target="_blank" class="inline-block ml-2 text-blue-600 hover:text-blue-800 transition-colors">
+          📍
+        </a>
+      </p>
+      <p><strong>👗 Dress Code:</strong> Your best high school dance attire!</p>
+    </div>
+  </div>
 </div>
 
----
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+  <div class="bg-gradient-to-br from-pink-500 to-purple-600 p-6 rounded-2xl transform hover:scale-105 transition-transform">
+    <h3 class="text-2xl font-bold mb-4">🎵 What to Expect</h3>
+    <ul class="space-y-2 text-lg">
+      <li>🎶 Savage Garden & 90s love songs</li>
+      <li>� Slow dances & fast beats</li>
+      <li>📸 Photo booth with props</li>
+      <li>🍰 Birthday cake & treats</li>
+      <li>💕 Nostalgic romantic vibes</li>
+    </ul>
+  </div>
 
-<div class="text-center text-gray-600 italic">
-  <span class="text-red-500">❤️</span> Built with Jekyll, Tailwind CSS 4.x, and GitHub Pages
+  <div class="bg-gradient-to-br from-red-500 to-pink-600 p-6 rounded-2xl transform hover:scale-105 transition-transform">
+    <h3 class="text-2xl font-bold mb-4">� The Vibe</h3>
+    <ul class="space-y-2 text-lg">
+      <li>🌹 Romantic 90s nostalgia</li>
+      <li>✨ Dreamy dance floor moments</li>
+      <li>🎭 High school sweethearts energy</li>
+      <li>🌟 Love songs that defined a decade</li>
+      <li>� Memories to last forever</li>
+    </ul>
+  </div>
+</div>
+
+<div class="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 p-8 rounded-3xl mb-8">
+  <h2 class="text-3xl font-bold mb-4">🎂 Let's Celebrate Hannah! 🎂</h2>
+  <p class="text-xl mb-4">
+    Join us for a night of nostalgia, dancing, and fun as we celebrate Hannah turning the big 4-0!
+    Dust off your best 90s moves and get ready to party like it's 1999!
+  </p>
+  <div class="text-lg">
+    <p>💌 RSVP appreciated but not required</p>
+    <p>🎈 Come ready to dance the night away!</p>
+  </div>
+</div>
+
+<div class="text-center">
+  <div class="inline-block bg-black/50 p-6 rounded-2xl border-4 border-yellow-400">
+    <p class="text-2xl font-bold text-yellow-300 mb-2">
+      Can't wait to see you there!
+    </p>
+    <p class="text-lg text-pink-300">
+      Let's make this a night to remember! 🌟
+    </p>
+  </div>
+</div>
+
+<div class="mt-12 text-center text-sm text-purple-300">
+  <p>Questions? Contact the party planners!</p>
 </div>

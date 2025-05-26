@@ -1,6 +1,6 @@
-# Hello World Jekyll Site
+# Hannah's 40th Birthday Party Invitation
 
-A simple Jekyll website for GitHub Pages with Tailwind CSS 4.x styling.
+A totally rad 90s-themed birthday party invitation site built with Jekyll and Tailwind CSS 4.x.
 
 ## Setup with asdf
 
@@ -51,24 +51,32 @@ Visit `http://localhost:4000` to see your site.
 
 ```
 .
-├── _config.yml          # Jekyll configuration
-├── _layouts/            # HTML layouts
-│   └── default.html     # Default page layout with Tailwind CSS
-├── _site/               # Generated site (ignored by git)
-├── .tool-versions       # asdf tool versions
-├── Gemfile              # Ruby dependencies (includes webrick)
-├── .gitignore           # Git ignore rules
-├── index.md             # Homepage with Tailwind components
-├── about.md             # About page with Tailwind styling
-└── README.md            # This file
+├── _config.yml                    # Jekyll configuration
+├── _layouts/                      # HTML layouts
+│   └── default.html              # 90s-themed layout with animations
+├── _site/                         # Generated site (ignored by git)
+├── .tool-versions                 # asdf tool versions
+├── Gemfile                        # Ruby dependencies (includes webrick)
+├── .gitignore                     # Git ignore rules
+├── index.md                       # Party invitation page
+├── Purple_Bold_Prom_Night_Poster.png # Design inspiration
+└── README.md                      # This file
 ```
+
+## Party Details
+
+- **Date**: June 20, 2025 at 6:30 PM
+- **Location**: 310 Dallas St., Huntsville, AL 35801
+- **Theme**: 90s High School Dance Party
+- **Dress Code**: Best high school dance attire
 
 ## Features
 
+- **90s Retro Design**: Neon colors, gradients, and disco animations
 - **Jekyll 3.9.3**: GitHub Pages compatible static site generator
-- **Tailwind CSS 4.x**: Latest version via CDN for modern styling
-- **Responsive Design**: Mobile-first approach with Tailwind utilities
-- **asdf Integration**: Ruby version management
+- **Tailwind CSS 4.x**: Latest version via CDN with custom 90s styling
+- **Responsive Design**: Mobile-first approach perfect for sharing
+- **Interactive Elements**: Hover effects and animated backgrounds
 - **GitHub Pages Ready**: Optimized for GitHub Pages deployment
 
 ## Customization
