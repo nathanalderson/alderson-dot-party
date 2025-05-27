@@ -35,6 +35,7 @@ title: Party Invitation
         </a>
       </p>
       <p><strong>👗 Dress Code:</strong> Your best high school dance attire!</p>
+      <p><strong>🚸 Kids:</strong> This party is mostly for adults, but if you've got teenagers that want to come, they're welcome too! No little ones, please.</p>
     </div>
   </div>
 </div>
