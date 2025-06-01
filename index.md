@@ -36,6 +36,7 @@ title: Party Invitation
       </p>
       <p><strong>👗 Dress Code:</strong> Your best high school dance attire!</p>
       <p><strong>🚸 Kids:</strong> This party is mostly for adults, but if you've got teenagers that want to come, they're welcome too! No little ones, please.</p>
+      <p><strong>👀 Is it a surprise?</strong> No, Hannah knows. She said she's not coming if you're not coming.</p>
     </div>
   </div>
 </div>
@@ -53,7 +54,7 @@ title: Party Invitation
   </div>
 
   <div class="bg-gradient-to-br from-red-500 to-pink-600 p-6 rounded-2xl transform hover:scale-105 transition-transform">
-    <h3 class="text-2xl font-bold mb-4">� The Vibe</h3>
+    <h3 class="text-2xl font-bold mb-4">💜 The Vibe</h3>
     <ul class="space-y-2 text-lg">
       <li>🌹 90s nostalgia</li>
       <li>✨ Dreamy dance floor moments</li>
